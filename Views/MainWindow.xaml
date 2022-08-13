@@ -1,0 +1,24 @@
+﻿<reactiveUi:ReactiveWindow x:Class="WpfGame.Views.MainWindow"
+                           xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                           xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                           xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                           xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                           xmlns:reactiveUi="http://reactiveui.net"
+                           xmlns:viewModels="clr-namespace:WpfGame.ViewModels"
+                           xmlns:views="clr-namespace:WpfGame.Views"
+                           x:TypeArguments="viewModels:MainViewModel"
+                           mc:Ignorable="d"
+                           d:DataContext="{d:DesignInstance viewModels:MainViewModel}"
+                           Title="MainWindow" Height="700" Width="1000">
+    <Grid>
+       <MediaElement Name="Music" LoadedBehavior="Manual" MediaEnded="Music_OnMediaEnded"></MediaElement>
+       <reactiveUi:RoutedViewHost 
+        x:Name="RoutedViewHost"
+        HorizontalContentAlignment="Stretch"
+        VerticalContentAlignment="Stretch">
+        <reactiveUi:RoutedViewHost.DefaultContent>
+            <views:GameView/>
+        </reactiveUi:RoutedViewHost.DefaultContent>
+    </reactiveUi:RoutedViewHost>
+    </Grid>
+</reactiveUi:ReactiveWindow>

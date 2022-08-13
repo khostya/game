@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="ReactiveUI.Events.WPF" Version="15.1.1" />
+      <PackageReference Include="ReactiveUI.WPF" Version="18.3.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Assets\Sprites\Entities\Crab\Attack" />
+    </ItemGroup>
+
+</Project>
